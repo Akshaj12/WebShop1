@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace webshop.Models
 {
+    //Some changr in this file as well
     public class ApplicationUser : IdentityUser
     {
     }
