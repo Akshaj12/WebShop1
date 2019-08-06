@@ -1,6 +1,6 @@
 using System;
 
-namespace ng_webapp
+namespace webshop
 {
     public class WeatherForecast
     {

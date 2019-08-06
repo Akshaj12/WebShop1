@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ng_webapp.Data.Migrations
+namespace webshop.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

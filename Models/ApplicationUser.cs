@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ng_webapp.Models
+namespace webshop.Models
 {
     public class ApplicationUser : IdentityUser
     {

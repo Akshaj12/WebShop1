@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ng_webapp.Controllers
+namespace webshop.Controllers
 {
     public class OidcConfigurationController : Controller
     {

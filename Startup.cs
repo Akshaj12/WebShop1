@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
-using ng_webapp.Data;
-using ng_webapp.Models;
+using webshop.Data;
+using webshop.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace ng_webapp
+namespace webshop
 {
     public class Startup
     {

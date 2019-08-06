@@ -1,4 +1,4 @@
-export const ApplicationName = 'ng_webapp';
+export const ApplicationName = 'webshop';
 
 export const ReturnUrlType = 'returnUrl';
 

@@ -1,11 +1,11 @@
 {
-  "name": "ng_webapp",
+  "name": "webshop",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run ng_webapp:server:dev",
+    "build:ssr": "ng run webshop:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
