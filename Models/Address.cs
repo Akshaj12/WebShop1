@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webshop.Models
 {
- //   [Owned]
     public class Address
     {
       public int Id { get; set; }
