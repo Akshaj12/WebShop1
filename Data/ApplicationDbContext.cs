@@ -72,11 +72,12 @@ namespace webshop.Data
 
         modelBuilder.Entity<Category>(b =>
         {
-            b.HasMany(c => c.SubCategories).WithOne().HasForeignKey(c => c.ParentCategoryId);
-            b.HasMany(c => c.Products).WithOne().HasForeignKey(pc => pc.CategoryId);
+            //b.HasOne(c => c.ParentCategory).WithMany(c => c.SubCategories);
+            b.HasMany<Category>(c => c.SubCategories).WithOne(c => c.ParentCategory);
+            b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
         });
         modelBuilder.Entity<Category>().HasData(
-          new Category() { CategoryId = 1, CategoryName = "Categories" }
+          new Category() { Id = 1, CategoryName = "Categories" }
         );
 
         modelBuilder.Entity<ProductCategory>(b =>
@@ -84,5 +85,14 @@ namespace webshop.Data
             b.HasKey(pc => new { pc.CategoryId, pc.ProductId});
         });
     }
+
+    public DbSet<Address> Addresses { get; set; }
+    //public DbSet<Cart> Carts { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<PaymentMethod> PaymentMethods { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Store> Stores { get; set; }
   }
 }
