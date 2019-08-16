@@ -1,0 +1,22 @@
+<h1>Categories</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!categories"><em>Loading...</em></p>
+
+<table class='table table-striped' *ngIf="categories">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Parent Category ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{ category.id }}</td>
+      <td>{{ category.categoryName }}</td>
+      <td>{{ category.parentCategoryId }}</td>
+    </tr>
+  </tbody>
+</table>

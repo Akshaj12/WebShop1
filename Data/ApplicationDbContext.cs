@@ -77,7 +77,14 @@ namespace webshop.Data
             b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
         });
         modelBuilder.Entity<Category>().HasData(
-          new Category() { Id = 1, CategoryName = "Categories" }
+          new Category() { Id = 1, CategoryName = "Categories" },
+          new Category() { Id = 2, CategoryName = "Shoes", ParentCategoryId = 1 },
+          new Category() { Id = 3, CategoryName = "Sneakers", ParentCategoryId = 2 },
+          new Category() { Id = 4, CategoryName = "Nike Sneakers", ParentCategoryId = 3 },
+          new Category() { Id = 7, CategoryName = "Boots", ParentCategoryId = 2 },
+
+          new Category() { Id = 5, CategoryName = "Accessories", ParentCategoryId = 1 },
+          new Category() { Id = 6, CategoryName = "Necklaces", ParentCategoryId = 5 }
         );
 
         modelBuilder.Entity<ProductCategory>(b =>
