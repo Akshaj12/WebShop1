@@ -69,6 +69,9 @@ namespace webshop.Data
         {
             b.HasKey(o => new { o.OrderId, o.ProductId});
         });
+        modelBuilder.Entity<Product>().HasData(
+          new Product() { Id = 1, Name = "Example Product" }
+        );
 
         modelBuilder.Entity<Category>(b =>
         {

@@ -33,7 +33,7 @@ namespace webshop.Models
       public int SavedAddressId { get; set; }
       public Address SavedAddress { get; set; }
       public ICollection<Order> Orders { get; set; }
-      public ICollection<Product> FavoriteProducts { get; set; }
+      //public ICollection<Product> FavoriteProducts { get; set; }
       //public Cart Cart { get; set; }
     }
 }
