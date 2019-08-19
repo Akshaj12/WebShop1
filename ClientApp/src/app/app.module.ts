@@ -16,6 +16,7 @@ import { CategoriesComponent } from 'src/app/categories/categories.component';
 
 import { CustomersComponent } from 'src/app/customers/customers.component';
 import { OrdersComponent } from './orders/orders.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { OrdersComponent } from './orders/orders.component';
     FetchDataComponent,
     CategoriesComponent,
     CustomersComponent,
-    OrdersComponent
+    OrdersComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,6 +42,7 @@ import { OrdersComponent } from './orders/orders.component';
       { path: 'categories', component: CategoriesComponent }, // canActivate: [AuthorizeGuard] },
       { path: 'customers', component: CustomersComponent },
       { path: 'orders', component: OrdersComponent },
+      { path: 'products', component: ProductsComponent },
     ])
   ],
   providers: [
