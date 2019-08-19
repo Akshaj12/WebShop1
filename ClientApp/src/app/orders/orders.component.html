@@ -1,3 +1,28 @@
-<p>
-  orders works!
-</p>
+<h1>Orders</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!orders"><em>Loading...</em></p>
+
+<table class='table table-striped' *ngIf="orders">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Status</th>
+      <th>Customer ID</th>
+      <th>Delivery Address ID</th>
+      <th>Billing Address ID</th>
+      <th>OrderTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{ order.id }}</td>
+      <td>{{ order.status }}</td>
+      <td>{{ order.customerId }}</td>
+      <td>{{ order.deliveryaddressId }}</td>
+      <td>{{ order.billingaddressId }}</td>
+      <td>{{ order.ordertime }}</td>
+    </tr>
+  </tbody>
+</table>

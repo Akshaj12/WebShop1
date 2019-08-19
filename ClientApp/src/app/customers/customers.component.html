@@ -1,3 +1,23 @@
-<p>
-  customers works!
-</p>
+<h1>Customers</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!customers"><em>Loading...</em></p>
+
+<table class='table table-striped' *ngIf="customers">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>UserID</th>
+      <th>Saved Address ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.userid }}</td>
+      <td>{{ customer.savedaddressId }}</td>
+    </tr>
+  </tbody>
+</table>
+

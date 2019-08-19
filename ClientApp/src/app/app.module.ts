@@ -12,7 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
-import { CategoriesComponent } from 'src/app/categories/categories.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 import { CustomersComponent } from 'src/app/customers/customers.component';
 import { OrdersComponent } from './orders/orders.component';
