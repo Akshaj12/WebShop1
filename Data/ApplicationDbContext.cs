@@ -73,18 +73,17 @@ namespace webshop.Data
           new Product() { Id = 1, Name = "Example Product" }
         );
 
-        modelBuilder.Entity<Category>(b =>
-        {
-            //b.HasOne(c => c.ParentCategory).WithMany(c => c.SubCategories);
-            b.HasMany<Category>(c => c.SubCategories).WithOne(c => c.ParentCategory);
-            b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
-        });
+        //modelBuilder.Entity<Category>(b =>
+        //{
+        //    //b.HasOne(c => c.ParentCategory).WithMany(c => c.SubCategories);
+        //    b.HasMany<Category>(c => c.SubCategories).WithOne(c => c.ParentCategory);
+        //    b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
+        //});
         modelBuilder.Entity<Category>().HasData(
-          new Category() { Id = 1, CategoryName = "Categories" },
-          new Category() { Id = 2, CategoryName = "Shoes", ParentCategoryId = 1 },
-          new Category() { Id = 3, CategoryName = "Sneakers", ParentCategoryId = 2 },
-          new Category() { Id = 4, CategoryName = "Nike Sneakers", ParentCategoryId = 3 },
-          new Category() { Id = 7, CategoryName = "Boots", ParentCategoryId = 2 },
+          new Category() { Id = 1, CategoryName = "Shoes", ParentCategoryId = 1 },
+          new Category() { Id = 2, CategoryName = "Sneakers", ParentCategoryId = 2 },
+          new Category() { Id = 3, CategoryName = "Nike Sneakers", ParentCategoryId = 3 },
+          new Category() { Id = 4, CategoryName = "Boots", ParentCategoryId = 2 },
 
           new Category() { Id = 5, CategoryName = "Accessories", ParentCategoryId = 1 },
           new Category() { Id = 6, CategoryName = "Necklaces", ParentCategoryId = 5 }
@@ -104,4 +103,4 @@ namespace webshop.Data
     public DbSet<Product> Products { get; set; }
     //public DbSet<Store> Stores { get; set; }
   }
-}
+} 
