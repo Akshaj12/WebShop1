@@ -31,6 +31,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20190815103217_Initial.cs" />
     <Compile Remove="Migrations\20190815103217_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190819123313_Initial.cs" />
+    <Compile Remove="Migrations\20190819123313_Initial.Designer.cs" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <Exec Command="node --version" ContinueOnError="true">
