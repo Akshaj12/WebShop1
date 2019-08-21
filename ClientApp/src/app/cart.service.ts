@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CartService {
-    items = [];
-
+    items: CartItem[] = [];
+     
     addToCart(product) {
         this.items.push(product);
+        console.log(this.items);
     }
 
     getItems() {
@@ -21,5 +22,16 @@ export class CartService {
     constructor() { }
 }
 
+export interface Product {
+    id: number,
+    name: string,
+    description: string,
+    price: number,
+}
+
+export interface CartItem {
+    product: Product,
+    quantity: number,
+}
 
 

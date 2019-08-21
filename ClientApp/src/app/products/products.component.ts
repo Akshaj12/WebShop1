@@ -1,5 +1,7 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Product } from '../cart.service'
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -26,10 +28,3 @@ export class ProductsComponent implements OnInit {
   }
 
 }
-
-interface Product {
-  id: number,
-  name: string,
-  customerId: number,
-}
-

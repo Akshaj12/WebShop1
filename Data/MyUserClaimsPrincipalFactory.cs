@@ -15,7 +15,7 @@ namespace webshop.Data
     public class MyUserClaimsPrincipalFactory : UserClaimsPrincipalFactory<ApplicationUser>
 {
     public MyUserClaimsPrincipalFactory(
-        UserManager<ApplicationUser> userManager,
+        ApplicationUserManager userManager,
         IOptions<IdentityOptions> optionsAccessor)
         : base(userManager, optionsAccessor)
     {

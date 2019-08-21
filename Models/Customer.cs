@@ -30,7 +30,7 @@ namespace webshop.Models
       public string UserId { get; set; }
       public ApplicationUser User { get; set; }
       [ForeignKey("SavedAddress")]
-      public int SavedAddressId { get; set; }
+      public int? SavedAddressId { get; set; }
       public Address SavedAddress { get; set; }
       public ICollection<Order> Orders { get; set; }
       //public ICollection<Product> FavoriteProducts { get; set; }

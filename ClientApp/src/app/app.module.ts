@@ -19,6 +19,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     OrdersComponent,
     ProductsComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent
-  ],
+    ProductDetailsComponent,
+    CartComponent
+    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
@@ -46,10 +48,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
       { path: 'categories', component: CategoriesComponent }, // canActivate: [AuthorizeGuard] },
       { path: 'customers', component: CustomersComponent },
       { path: 'orders', component: OrdersComponent },
-        { path: 'products', component: ProductsComponent },
-        
-        { path: '', component: ProductsComponent },  
-        { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ])
   ],
   providers: [

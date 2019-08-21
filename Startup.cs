@@ -32,7 +32,9 @@ namespace webshop
 
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddUserManager<ApplicationUserManager>()
                 .AddClaimsPrincipalFactory<MyUserClaimsPrincipalFactory>();
+
 
             services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();

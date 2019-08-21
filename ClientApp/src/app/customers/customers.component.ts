@@ -23,9 +23,9 @@ export class CustomersComponent implements OnInit {
 }
 
 interface Customer {
-  Id: number,
-  UserId: string,
-  SavedAddressId: number,
+  id: number,
+  userId: string,
+  savedAddressId: number,
   //date: string;
   //temperatureC: number;
   //temperatureF: number;

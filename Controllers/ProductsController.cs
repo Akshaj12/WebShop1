@@ -25,6 +25,7 @@ namespace webshop.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
+            // return await _context.Products.Include(product => product.ProductCategories).ToListAsync();
             return await _context.Products.ToListAsync();
         }
 

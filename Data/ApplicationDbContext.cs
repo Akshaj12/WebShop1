@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace webshop.Data
 {
@@ -69,17 +70,25 @@ namespace webshop.Data
         {
             b.HasKey(o => new { o.OrderId, o.ProductId});
         });
+
+        
         modelBuilder.Entity<Product>().HasData(
-          new Product() { Id = 1, Name = "Example Product" }
+          new Product() { Id = 1, Name = "Nike Sneakers 1", }
+            //  ProductCategories =  (ICollection<ProductCategory>) 
+            //new List<ProductCategory>() { new ProductCategory() { CategoryId = 3, ProductId = 1, Relevance = 100 } } }
         );
 
-        //modelBuilder.Entity<Category>(b =>
-        //{
-        //    //b.HasOne(c => c.ParentCategory).WithMany(c => c.SubCategories);
-        //    b.HasMany<Category>(c => c.SubCategories).WithOne(c => c.ParentCategory);
-        //    b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
-        //});
-        modelBuilder.Entity<Category>().HasData(
+            modelBuilder.Entity<ProductCategory>().HasData(
+              new ProductCategory() { CategoryId = 3, ProductId = 1, Relevance = 100 }
+            );
+
+            //modelBuilder.Entity<Category>(b =>
+            //{
+            //    //b.HasOne(c => c.ParentCategory).WithMany(c => c.SubCategories);
+            //    b.HasMany<Category>(c => c.SubCategories).WithOne(c => c.ParentCategory);
+            //    b.HasMany(c => c.Products).WithOne(pc => pc.Category).HasForeignKey(pc => pc.CategoryId);
+            //});
+            modelBuilder.Entity<Category>().HasData(
           new Category() { Id = 1, CategoryName = "Shoes", ParentCategoryId = 1 },
           new Category() { Id = 2, CategoryName = "Sneakers", ParentCategoryId = 2 },
           new Category() { Id = 3, CategoryName = "Nike Sneakers", ParentCategoryId = 3 },
