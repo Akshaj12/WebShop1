@@ -28,9 +28,14 @@ export interface Product {
     description: string,
     price: number,
 }
-
+//export interface Customer {
+//    id: number,
+//    name: string,
+   
+//}
 export interface CartItem {
     product: Product,
+    //customer: Customer,
     quantity: number,
 }
 
