@@ -15,7 +15,9 @@
   <tbody>
     <tr *ngFor="let category of categories">
       <td>{{ category.id }}</td>
-      <td>{{ category.categoryName }}</td>
+      <a [title]="category.categoryName + ' details'" [routerLink]="['/products']">
+        <td>{{ category.categoryName }}</td>
+      </a>
       <td>{{ category.parentCategoryId }}</td>
     </tr>
   </tbody>

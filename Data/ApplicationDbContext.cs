@@ -73,9 +73,18 @@ namespace webshop.Data
 
         
         modelBuilder.Entity<Product>().HasData(
-          new Product() { Id = 1, Name = "Nike Sneakers 1", }
-            //  ProductCategories =  (ICollection<ProductCategory>) 
-            //new List<ProductCategory>() { new ProductCategory() { CategoryId = 3, ProductId = 1, Relevance = 100 } } }
+          new Product() { Id = 1, Name = "Nike Sneakers",Price= 700, Description= "Freshen Up Your Look At Nike!"},
+          new Product() { Id = 2, Name = "Lee Cooper", Price = 700, Description = "Freshen Up Your Look !" },
+          new Product() { Id = 3, Name = "Red tape", Price = 700  , Description = "better quality!" },
+           new Product() { Id = 4, Name = "Belts", Price = 400, Description = "Smart Look !" },
+          new Product() { Id = 5, Name = "Perfume", Price = 550, Description = " Perfume !" },
+          new Product() { Id = 6, Name = "Sunglasses", Price = 1200, Description = "better quality!" },
+           new Product() { Id = 7, Name = "Jackets", Price = 700, Description = "Freshen Up Your Look At Nike!" },
+          new Product() { Id = 8, Name = "Pants", Price = 700, Description = "Perfume !" },
+          new Product() { Id = 9, Name = "Shirts", Price = 700, Description = "better quality!" }
+
+        //  ProductCategories =  (ICollection<ProductCategory>) 
+        //new List<ProductCategory>() { new ProductCategory() { CategoryId = 3, ProductId = 1, Relevance = 100 } } }
         );
 
             modelBuilder.Entity<ProductCategory>().HasData(
@@ -90,12 +99,8 @@ namespace webshop.Data
             //});
             modelBuilder.Entity<Category>().HasData(
           new Category() { Id = 1, CategoryName = "Shoes", ParentCategoryId = 1 },
-          new Category() { Id = 2, CategoryName = "Sneakers", ParentCategoryId = 2 },
-          new Category() { Id = 3, CategoryName = "Nike Sneakers", ParentCategoryId = 3 },
-          new Category() { Id = 4, CategoryName = "Boots", ParentCategoryId = 2 },
-
-          new Category() { Id = 5, CategoryName = "Accessories", ParentCategoryId = 1 },
-          new Category() { Id = 6, CategoryName = "Necklaces", ParentCategoryId = 5 }
+          new Category() { Id = 2, CategoryName = "Accessories", ParentCategoryId = 2 },
+          new Category() { Id = 3, CategoryName = "Clothes", ParentCategoryId = 3 }
         );
 
         modelBuilder.Entity<ProductCategory>(b =>

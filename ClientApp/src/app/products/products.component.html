@@ -8,27 +8,28 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products">
+    <tr *ngFor="let product of products; index as productId">
       <td>{{ product.id }}</td>
-      <td>{{ product.name }}</td>
+      <td>
+        <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+          {{ product.name }}
+        </a>
+      </td>
+      <td>
+        <p *ngIF="product.description">
+          Description : {{ product.description }}
+        </p>
+      </td>
+      <td>
+        <button (click)="share()">
+          Share
+        </button>
+      </td>
+      <td>
+        <app-product-alerts [product]="product"
+                            (notify)="onNotify()">
+        </app-product-alerts>
+      </td>
     </tr>
   </tbody>
-</table>
-<div *ngFor="let product of products; index as productId">
-
-  <h3>
-    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
-      {{ product.name }}
-    </a>
-  </h3>
-
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-  <button (click)="share()">
-    Share
-  </button>
-  <app-product-alerts [product]="product"
-   (notify)="onNotify()">
-  </app-product-alerts>
-</div>
+</table>  
